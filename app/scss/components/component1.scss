@@ -1,0 +1,108 @@
+@use '../util' as *;
+
+
+.primary-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(173, 216, 230, 0.863);
+    width: 100%;
+
+    &__logo {
+        margin: rem(10);
+        width: rem(230);
+        height: auto;
+    }
+}
+    // Nav styles 
+    .primary-navigation {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            @include breakpoint-down(small) {
+                --underline-gap: .5rem;
+                position: fixed;
+                z-index: 1000;
+                inset: 0 0 0 30%;
+                list-style: none;
+                padding: min(20rem, 15vh) 2rem;
+                transform: translateX(100%);
+                transition: transform 500ms ease-in-out;
+            }
+    }
+        
+    .primary-navigation[data-visible="true"] {
+            transform: translateX(0);
+    }
+        
+        
+    @supports (backdrop-filter: blur( 5px )) {
+            .primary-navigation {
+                background: rgba(255, 255, 255, 0.15);
+                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                backdrop-filter: blur( 5px );
+                -webkit-backdrop-filter: blur( 5px );
+                border: 1px solid rgba( 255, 255, 255, 0.18 );
+            }
+    }
+
+
+
+// links styles
+.nav-links{
+    text-transform: uppercase;
+    list-style-type: none;
+    height: 100%;
+ 
+    &__li {
+        margin-bottom: rem(30);
+        letter-spacing: rem(2.7);
+        line-height: rem(19);
+        border-bottom: .2rem solid var(--clr-whiteOP0);
+    }
+
+    &__li:hover,:focus {
+        border-color: var(--clr-white0P5);
+    }
+
+    &__a {
+        text-decoration: none;
+        color: var(--clr-white) !important;
+    }
+
+    .number {
+        font-weight: bold;
+        line-height: rem(19);
+        margin-right: rem(8);
+    }
+}
+
+// Nav transitions 
+.navbar-toggler {
+    border: 0 !important;
+    z-index: 2000;
+    margin-right: rem(15);
+    background-position: center;
+}
+
+
+.navbar-toggle-icon {
+    background-image: url("/images/icon-hamburger.svg") !important;
+    display: inline-block;
+    width: rem(24);
+    height: rem(21);
+}
+
+
+.navbar-toggle-icon.open {
+    background-image: url("/images/icon-close.svg") !important;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: rem(24);
+    height: rem(21);
+    background-position: center;
+}
+
+
+
+
+
