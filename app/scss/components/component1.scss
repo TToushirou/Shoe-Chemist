@@ -102,6 +102,91 @@
     background-position: center;
 }
 
+.socials {
+    margin-top: rem(10);
+    text-align: center;
+    align-items: center;
+}
+
+// paypal image
+.pp {
+    width: 100%;
+    height: auto;
+}
+
+
+// form styles
+.input {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	padding-top: 1.5rem;
+	&+.input {
+		margin-top: 1.5rem;
+	}
+}
+
+.input-label {
+	color: #8597a3;
+	position: absolute;
+	top: 1.5rem;
+	transition: .25s ease;
+}
+
+.input-field {
+	border: 0;
+	z-index: 1;
+	background-color: transparent;
+	border-bottom: 2px solid #eee; 
+	font: inherit;
+	font-size: 1.125rem;
+	padding: .25rem 0;
+	&:focus, &:valid {
+		outline: 0;
+		border-bottom-color: #6658d3;
+		&+.input-label {
+			color: #6658d3;
+			transform: translateY(-1.5rem);
+		}
+	}
+}
+
+.action {
+	margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem(50);
+}
+
+.action-button {
+	font: inherit;
+	font-size: 1.25rem;
+	padding: 1em;
+    width: rem(300);
+	font-weight: 500;
+	background-color: #6658d3;
+	border-radius: 6px;
+	color: #FFF;
+	border: 0;
+	&:focus {
+		outline: 0;
+	}
+}
+
+
+
+
+// footer styles
+.footer-section {
+    background-color: rgba(173, 216, 230, 0.863);
+
+    .social-links {
+        list-style: none;
+    }
+}
+
+
+
 
 
 
