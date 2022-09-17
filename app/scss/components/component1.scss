@@ -45,8 +45,6 @@
             }
     }
 
-
-
 // links styles
 .nav-links{
     text-transform: uppercase;
@@ -108,14 +106,62 @@
     align-items: center;
 }
 
+// Websites text styles 
+.content {
+    text-align: center;
+    font-family: var(--font-mainheaders);
+    
+    &__header {
+        font-weight: 700;
+    }
+
+    &__text {
+        font-family: var(--font-body);
+        font-size: rem(18);
+        letter-spacing: rem(2);
+    }
+
+    .g {
+        color: #7cbb1d;
+        font-family: var(--font-header);
+        letter-spacing: rem(1);
+    }
+
+}
+
+.p {
+    color: #800080;
+    font-family: var(--font-header);
+}
+
+.small-rem {
+    font-family: var(--font-body);
+    color: #000000;
+    display: flex;
+    text-align: center;
+    letter-spacing: rem(1);
+    margin-bottom: rem(10);
+}
+
+.socials {
+    font-family: var(--font-mainheaders);
+}
+
+.form-head {
+    font-family: var(--font-mainheaders);
+}
+
 // paypal image
 .pp {
     width: 100%;
     height: auto;
 }
 
-
 // form styles
+/*form {
+    padding: 0 rem(5) 0 rem(5);
+} */
+
 .input {
 	display: flex;
 	flex-direction: column-reverse;
@@ -172,8 +218,6 @@
 		outline: 0;
 	}
 }
-
-
 
 
 // footer styles
